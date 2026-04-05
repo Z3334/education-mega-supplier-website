@@ -1,145 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Education Mega Supplier provides reliable technology, security, repair, and office supply solutions for schools, institutions, businesses, and procurement projects across South Africa." />
-  <meta name="keywords" content="Education Mega Supplier, laptops, CCTV, stationery, repairs, office supplies, school supplies, Mkhondo, South Africa" />
-  <meta name="author" content="Education Mega Supplier" />
-  <title>Education Mega Supplier</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Mega Supplier | Elite Website</title>
+  <meta name="description" content="Education Mega Supplier provides reliable technology, stationery, CCTV, repairs, and procurement support for schools, businesses, and institutions across South Africa.">
   <style>
     :root{
-      --red:#981b1e;
-      --red-dark:#7d1316;
-      --bg:#ffffff;
-      --bg-soft:#f7f7f8;
+      --red:#9d1d20;
+      --red-dark:#7f1518;
+      --dark:#111827;
       --text:#0f172a;
       --muted:#475569;
+      --soft:#f8fafc;
       --line:#e5e7eb;
-      --dark:#111827;
-      --shadow:0 20px 45px rgba(15,23,42,.08);
-      --radius:26px;
+      --white:#ffffff;
+      --shadow:0 18px 45px rgba(15,23,42,.08);
+      --radius:24px;
       --max:1180px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      color:var(--text);
-      background:var(--bg);
-      line-height:1.6;
-    }
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
     a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
+    img{display:block;max-width:100%}
     .container{width:min(var(--max), calc(100% - 32px));margin:0 auto}
-    .topbar{
-      position:sticky;top:0;z-index:100;
-      background:rgba(255,255,255,.94);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:18px;padding:16px 0;
-    }
-    .logo{height:58px;width:auto}
-    .nav-links{display:flex;gap:24px;flex-wrap:wrap;font-weight:700;font-size:14px}
+    .topbar{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:18px}
+    .logo{height:56px;width:auto}
+    .nav-links{display:flex;gap:24px;flex-wrap:wrap;font-size:14px;font-weight:700}
     .nav-links a:hover{color:var(--red)}
-    .hero{
-      background:linear-gradient(135deg, #fff5f5 0%, #ffffff 45%, #f5f7fa 100%);
-      padding:72px 0 56px;
-    }
-    .hero-grid{
-      display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center;
-    }
-    .badge{
-      display:inline-block;padding:10px 16px;border:1px solid #f1caca;border-radius:999px;
-      color:var(--red);font-size:14px;font-weight:700;background:#fff;box-shadow:var(--shadow);
-    }
-    h1{
-      font-size:clamp(2.3rem, 4.2vw, 4.35rem);
-      line-height:1.05;margin:18px 0 18px;font-weight:900;letter-spacing:-0.03em;
-      max-width:780px;
-    }
-    .lead{font-size:1.1rem;color:var(--muted);max-width:760px}
-    .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:14px 22px;border-radius:18px;font-weight:800;font-size:15px;
-      transition:.2s ease;cursor:pointer
-    }
+    .hero{background:linear-gradient(135deg,#fff5f5 0%,#ffffff 48%,#f4f7fb 100%);padding:72px 0 60px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+    .badge{display:inline-block;padding:10px 16px;border-radius:999px;background:#fff;border:1px solid #f2cccc;color:var(--red);font-size:13px;font-weight:800;box-shadow:var(--shadow)}
+    h1{font-size:clamp(2.4rem,4.8vw,4.6rem);line-height:1.03;letter-spacing:-.04em;margin:18px 0 18px;font-weight:900}
+    h2{font-size:clamp(1.8rem,3vw,3rem);line-height:1.08;letter-spacing:-.03em;margin:0 0 14px;font-weight:900}
+    .lead{font-size:1.1rem;color:var(--muted);max-width:720px}
+    .btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:18px;font-size:15px;font-weight:800;transition:.2s ease}
     .btn:hover{transform:translateY(-1px)}
     .btn-primary{background:var(--red);color:#fff;box-shadow:var(--shadow)}
     .btn-primary:hover{background:var(--red-dark)}
-    .btn-secondary{background:#fff;border:1px solid #d5d9e1;color:var(--text)}
-    .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
-    .chip{
-      padding:10px 14px;background:#fff;border:1px solid var(--line);
-      border-radius:999px;font-weight:700;font-size:14px;box-shadow:0 8px 20px rgba(15,23,42,.05)
-    }
-    .card{
-      background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-      padding:28px;box-shadow:var(--shadow)
-    }
-    .card-dark{
-      background:var(--dark);color:#fff;border:none
-    }
-    .eyebrow{
-      font-size:12px;font-weight:900;letter-spacing:.28em;text-transform:uppercase;margin-bottom:12px;
-      color:var(--red)
-    }
-    .card-dark .eyebrow{color:#f3b3b3}
+    .btn-secondary{border:1px solid #d5d9e1;background:#fff}
+    .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+    .chip{padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:14px;font-weight:700;box-shadow:0 8px 20px rgba(15,23,42,.05)}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    .card-dark{background:var(--dark);color:#fff;border:none}
+    .eyebrow{font-size:12px;font-weight:900;letter-spacing:.28em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+    .card-dark .eyebrow{color:#f2b8b8}
     section{padding:78px 0}
-    .section-soft{background:var(--bg-soft)}
-    h2{
-      font-size:clamp(1.8rem, 3vw, 3rem);
-      line-height:1.08;margin:0 0 14px;font-weight:900;letter-spacing:-0.03em;
-    }
-    .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
-    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}
-    .service{
-      background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 12px 28px rgba(15,23,42,.05)
-    }
-    .service h3{margin:0 0 10px;font-size:1.18rem}
-    .service p{margin:0;color:var(--muted)}
-    .value-list, .contact-list, .quick-links{padding:0;margin:0;list-style:none}
-    .value-list li, .contact-list li{margin:0 0 10px}
-    .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-    .footer{
-      border-top:1px solid var(--line);background:#fff;padding:0
-    }
-    .footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;padding:44px 0}
-    .footer-note{border-top:1px solid var(--line);padding:18px 0;text-align:center;color:#64748b;font-size:14px}
+    .grid-2{display:grid;grid-template-columns:1.05fr .95fr;gap:28px}
+    .services{background:var(--soft)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .service{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 12px 30px rgba(15,23,42,.05)}
+    .service h3{margin:0 0 10px;font-size:1.15rem}
     .muted{color:var(--muted)}
-    .section-head{max-width:820px;margin-bottom:14px}
-    .contact-list strong{color:var(--text)}
+    .list{margin:0;padding:0;list-style:none}
+    .list li{margin:0 0 10px}
+    .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
     .dark-section{background:var(--dark);color:#fff}
-    .dark-section .muted{color:#cbd5e1}
     .quote-card{background:#fff;color:var(--text);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
-    .quick-links a:hover{color:var(--red)}
-    @media (max-width: 980px){
-      .hero-grid,.grid-2,.mission-grid,.footer-grid,.service-grid{grid-template-columns:1fr 1fr}
+    .footer{border-top:1px solid var(--line)}
+    .footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;padding:44px 0}
+    .footer-note{border-top:1px solid var(--line);padding:18px 0;text-align:center;font-size:14px;color:#64748b}
+    @media (max-width:980px){
+      .hero-grid,.grid-2,.mission-grid,.service-grid,.footer-grid{grid-template-columns:1fr 1fr}
     }
-    @media (max-width: 760px){
-      .nav{align-items:flex-start;flex-direction:column}
-      .nav-links{gap:14px}
-      .hero{padding-top:52px}
-      .hero-grid,.grid-2,.mission-grid,.footer-grid,.service-grid{grid-template-columns:1fr}
-      .logo{height:50px}
+    @media (max-width:760px){
+      .nav{flex-direction:column;align-items:flex-start}
+      .hero-grid,.grid-2,.mission-grid,.service-grid,.footer-grid{grid-template-columns:1fr}
+      .container{width:min(var(--max), calc(100% - 22px))}
       section{padding:58px 0}
       .card,.quote-card,.service{padding:22px}
-      .container{width:min(var(--max), calc(100% - 22px))}
+      .logo{height:50px}
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container nav">
-      <a href="#top" aria-label="Education Mega Supplier home">
-        <img src="assets/logo.png" alt="Education Mega Supplier logo" class="logo" />
-      </a>
-      <nav class="nav-links" aria-label="Main navigation">
+      <a href="#top"><img src="assets/logo.png" alt="Education Mega Supplier logo" class="logo"></a>
+      <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#mission">Mission</a>
@@ -152,30 +93,25 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="badge">Tender-Ready Business Website</span>
-          <h1>Reliable technology, security, repair, and office supply solutions for schools, institutions, and businesses.</h1>
-          <p class="lead">
-            Education Mega Supplier is a strategic education and technology partner delivering dependable products,
-            tailored support, and practical procurement solutions across South Africa.
-          </p>
-          <div class="cta-row">
+          <span class="badge">Elite Business Website</span>
+          <h1>Reliable technology, CCTV, repairs, stationery, and procurement solutions.</h1>
+          <p class="lead">Education Mega Supplier supports schools, institutions, businesses, and tender projects with dependable products, practical service, and professional supply support across South Africa.</p>
+          <div class="btn-row">
             <a class="btn btn-primary" href="mailto:educationmegasupplier@gmail.com?subject=Request%20for%20Quotation">Request a Quote</a>
             <a class="btn btn-secondary" href="https://wa.me/27637845478" target="_blank" rel="noopener">Chat on WhatsApp</a>
           </div>
-          <div class="chips" aria-label="Client sectors">
+          <div class="chips">
             <span class="chip">Schools</span>
-            <span class="chip">Colleges</span>
-            <span class="chip">Universities</span>
-            <span class="chip">Businesses</span>
             <span class="chip">Institutions</span>
-            <span class="chip">Government &amp; tender supply</span>
+            <span class="chip">Businesses</span>
+            <span class="chip">Government Supply</span>
+            <span class="chip">Tender Support</span>
           </div>
         </div>
-
         <div>
           <div class="card" style="margin-bottom:18px">
             <div class="eyebrow">Company Details</div>
-            <ul class="contact-list muted">
+            <ul class="list muted">
               <li><strong>Website:</strong> www.educationmegasupplier.co.za</li>
               <li><strong>Email:</strong> educationmegasupplier@gmail.com</li>
               <li><strong>Phone 1:</strong> 063 784 5478</li>
@@ -184,11 +120,8 @@
             </ul>
           </div>
           <div class="card card-dark">
-            <div class="eyebrow">Why Clients Choose Us</div>
-            <p class="muted">
-              We combine product supply, technical support, repairs, security systems, and institutional understanding
-              to deliver dependable service with professionalism, integrity, and speed.
-            </p>
+            <div class="eyebrow">Why Choose Us</div>
+            <p class="muted">We deliver professional service, strong communication, quality products, fast quotations, and dependable support for education and business environments.</p>
           </div>
         </div>
       </div>
@@ -197,60 +130,51 @@
     <section id="about">
       <div class="container grid-2">
         <div>
-          <div class="eyebrow">About Education Mega Supplier</div>
-          <h2>Built on innovation, customer focus, and reliable supply capability.</h2>
-          <p class="muted">
-            Education Mega Supplier provides technology solutions, office supplies, repair services, and institutional support
-            tailored to the real needs of educational environments and operational workplaces. Our approach is centered on
-            quality, affordability, and dependable delivery.
-          </p>
-          <p class="muted">
-            We support clients with practical tools that improve learning, administration, safety, and productivity —
-            from laptops and components to CCTV systems, stationery, maintenance, and software support.
-          </p>
+          <div class="eyebrow">About Us</div>
+          <h2>Built on reliability, customer focus, and practical supply capability.</h2>
+          <p class="muted">Education Mega Supplier provides technology solutions, stationery, repair services, CCTV systems, and operational support tailored to real institutional and workplace needs.</p>
+          <p class="muted">Our goal is to help schools, offices, and organisations operate effectively through quality products, affordable solutions, and responsive service.</p>
         </div>
         <div class="card" style="background:#f8fafc">
           <div style="font-size:1.1rem;font-weight:800;margin-bottom:12px">Core Values</div>
-          <ul class="value-list muted">
-            <li>• Excellence in service and product quality</li>
-            <li>• Integrity, transparency, and trust</li>
-            <li>• Innovation and practical problem solving</li>
+          <ul class="list muted">
+            <li>• Excellence in product quality and service</li>
+            <li>• Integrity, professionalism, and trust</li>
+            <li>• Innovation and practical solutions</li>
             <li>• Customer satisfaction and fast response</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section-soft">
+    <section id="services" class="services">
       <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">Our Services</div>
-          <h2>Comprehensive solutions for education, business, and procurement needs.</h2>
-        </div>
-        <div class="service-grid">
+        <div class="eyebrow">Our Services</div>
+        <h2>Complete support for technology, security, repairs, and supplies.</h2>
+        <div class="service-grid" style="margin-top:28px">
           <article class="service">
-            <h3>Laptops &amp; Computer Supply</h3>
-            <p>Supply of laptops, desktop computers, tablets, accessories, and essential educational technology selected for performance, reliability, and institutional use.</p>
+            <h3>Laptops & Computer Supply</h3>
+            <p class="muted">Supply of laptops, desktops, tablets, accessories, and institutional technology solutions.</p>
           </article>
           <article class="service">
             <h3>Computer Components</h3>
-            <p>RAM, hard drives, graphics cards, cooling systems, and other quality components to maintain, upgrade, and extend the life of devices.</p>
+            <p class="muted">RAM, hard drives, graphics cards, and quality components for upgrades and maintenance.</p>
           </article>
           <article class="service">
-            <h3>CCTV &amp; Security Systems</h3>
-            <p>Modern CCTV surveillance solutions for campuses, offices, and facilities, including high-resolution cameras and dependable security support.</p>
+            <h3>CCTV & Security Systems</h3>
+            <p class="muted">Reliable surveillance solutions for campuses, offices, and business environments.</p>
           </article>
           <article class="service">
-            <h3>Computer &amp; Laptop Repairs</h3>
-            <p>Professional diagnostics, repair, maintenance, and technical support services designed to reduce downtime and keep operations running smoothly.</p>
+            <h3>Computer & Laptop Repairs</h3>
+            <p class="muted">Professional repairs, maintenance, and technical support to reduce downtime.</p>
           </article>
           <article class="service">
             <h3>Windows Installations</h3>
-            <p>Efficient installation, updates, and system setup services focused on compatibility, stability, performance, and security.</p>
+            <p class="muted">Efficient installation, updates, and setup focused on performance and security.</p>
           </article>
           <article class="service">
             <h3>Stationery Supply</h3>
-            <p>A broad range of stationery, teaching materials, office consumables, and school supplies for daily institutional and business needs.</p>
+            <p class="muted">Pens, notebooks, office consumables, teaching materials, and school supply support.</p>
           </article>
         </div>
       </div>
@@ -259,20 +183,14 @@
     <section id="mission">
       <div class="container mission-grid">
         <div class="card" style="background:var(--red);color:#fff;border:none">
-          <div class="eyebrow" style="color:#f8c8c8">Mission</div>
-          <h2>Empowering institutions with technology, supplies, and dependable support.</h2>
-          <p style="color:#fdeeee">
-            Our mission is to strengthen educational and professional environments through quality products,
-            responsive service, and practical solutions that improve efficiency, learning, and operational performance.
-          </p>
+          <div class="eyebrow" style="color:#f6c7c7">Mission</div>
+          <h2>Empowering schools, institutions, and businesses with dependable support.</h2>
+          <p style="color:#fdeeee">Our mission is to strengthen educational and operational environments through reliable products, responsive service, and tailored supply solutions.</p>
         </div>
         <div class="card">
           <div class="eyebrow">Vision</div>
-          <h2>To be a trusted national partner in education, technology, and office supply solutions.</h2>
-          <p class="muted">
-            We aim to expand access to reliable resources that enable teaching, collaboration, administration,
-            safety, and long-term growth across schools, institutions, and businesses.
-          </p>
+          <h2>To be a trusted partner in education, technology, and supply solutions.</h2>
+          <p class="muted">We aim to expand access to practical, affordable, and reliable resources that support growth, learning, safety, and productivity.</p>
         </div>
       </div>
     </section>
@@ -280,19 +198,14 @@
     <section class="dark-section">
       <div class="container grid-2" style="align-items:center">
         <div>
-          <div class="eyebrow" style="color:#f1b5b5">Procurement &amp; Tender Support</div>
-          <h2>Ready to supply institutions, projects, and bulk procurement requirements.</h2>
-          <p class="muted">
-            Whether you need once-off supply, long-term support, equipment sourcing, technical services,
-            or institutional quotations, Education Mega Supplier is ready to respond professionally and efficiently.
-          </p>
+          <div class="eyebrow" style="color:#f2b8b8">Procurement & Tender Support</div>
+          <h2>Ready to support projects, institutional orders, and bulk procurement.</h2>
+          <p class="muted">Whether you need once-off supply, long-term support, equipment sourcing, repairs, or official quotations, Education Mega Supplier is ready to assist professionally.</p>
         </div>
         <div class="quote-card">
           <div style="font-size:1.2rem;font-weight:900">Get a fast quotation</div>
-          <p class="muted">
-            Send your requirements by email or contact us directly on WhatsApp for responsive service and tailored support.
-          </p>
-          <div class="cta-row">
+          <p class="muted">Email your requirements or contact us directly on WhatsApp for responsive service.</p>
+          <div class="btn-row">
             <a class="btn btn-primary" href="mailto:educationmegasupplier@gmail.com?subject=Quotation%20Request">Email Us</a>
             <a class="btn btn-secondary" href="https://wa.me/27637845478" target="_blank" rel="noopener">WhatsApp Now</a>
           </div>
@@ -304,16 +217,12 @@
   <footer id="contact" class="footer">
     <div class="container footer-grid">
       <div>
-        <img src="assets/logo.png" alt="Education Mega Supplier logo" style="height:58px;width:auto" />
-        <p class="muted" style="max-width:360px;margin-top:14px">
-          Professional technology supply, security support, repairs, stationery, and procurement solutions for schools,
-          businesses, and institutions.
-        </p>
+        <img src="assets/logo.png" alt="Education Mega Supplier logo" class="logo">
+        <p class="muted" style="max-width:360px;margin-top:14px">Professional technology supply, stationery, CCTV, repairs, and procurement support for schools, institutions, and businesses.</p>
       </div>
-
       <div>
         <div class="eyebrow">Contact</div>
-        <ul class="contact-list muted">
+        <ul class="list muted">
           <li><strong>Phone 1:</strong> 063 784 5478</li>
           <li><strong>Phone 2:</strong> 083 870 512</li>
           <li><strong>Email:</strong> educationmegasupplier@gmail.com</li>
@@ -321,13 +230,12 @@
           <li><strong>Address:</strong> 5717 Phola Park, Mkhondo, 2380</li>
         </ul>
       </div>
-
       <div>
         <div class="eyebrow">Quick Links</div>
-        <ul class="quick-links muted">
+        <ul class="list muted">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#mission">Mission &amp; Vision</a></li>
+          <li><a href="#mission">Mission & Vision</a></li>
           <li><a href="https://wa.me/27637845478" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
       </div>
